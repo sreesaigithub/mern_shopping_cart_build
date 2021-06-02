@@ -1,15 +1,15 @@
 import './Navbar.css';
 import {Link} from 'react-router-dom';
 
-const Navbar = ( ) => {
+const Navbar = ({click} ) => {
     return (
         <nav className = "navbar">
-{/* logo */}
+        {/* logo */}
         <div className="navbar__logo">
             <h2>MERN Shopping Cart</h2>
 
         </div>
-{/* links */}
+        {/* links */}
 
         <ul className="navbar__links">
             <li>
@@ -25,9 +25,9 @@ const Navbar = ( ) => {
             </li>
         </ul>
 
-{/* hamburger menu */}
+        {/* hamburger menu */}
 
-        <div className="hamburger__menu">
+        <div className="hamburger__menu" onclick={click}>
             <div></div>
             <div></div>
             <div></div>
