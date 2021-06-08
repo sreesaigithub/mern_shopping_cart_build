@@ -5,8 +5,11 @@ const connectDB = require('./config/db');
 const Product = require('./models/Product');
 
 const importData = async () => {
+
+    console.log("Data import Success1");
     try{
-        await Product.deleteMany({});
+        console.log("Data import Success2");
+        // await Product.deleteMany({});
         await Product.insertMany(productsData);
 
         console.log("Data import Success");
