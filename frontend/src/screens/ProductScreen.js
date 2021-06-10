@@ -23,6 +23,11 @@ const ProductScreen = ({match, history}) =>{
     },[dispatch, product, match]);
 
 
+    const addToCartHandler = ()  => {
+        dispatch(addToCart(product._id, qty));
+        history.push("/cart");
+    }
+
     return (
         <div className="productscreen">
             {loading ? <h2>Loading....</h2> : error ? <h2>{error}</h2> : (
@@ -52,7 +57,7 @@ const ProductScreen = ({match, history}) =>{
                         </select>
                     </p>
                     <p>
-                        <button type="button">Add To Cart</button>
+                        <button type="button" onClick={addToCartHandler}>Add To Cart</button>
                     </p>
                 </div>
             </div>            
